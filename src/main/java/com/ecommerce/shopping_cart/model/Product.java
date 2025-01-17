@@ -18,6 +18,7 @@ public class Product {
 
     private String name;
 
+    private String brand;
     private String price;
 
     @ManyToOne(cascade = CascadeType.ALL)
