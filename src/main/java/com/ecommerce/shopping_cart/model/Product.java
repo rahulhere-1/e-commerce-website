@@ -21,6 +21,8 @@ public class Product {
     private String brand;
     private String price;
 
+
+
     @ManyToOne(cascade = CascadeType.ALL)
     private Category category;
 
