@@ -11,5 +11,5 @@ public interface ProductRepository extends JpaRepository<Product,Long> {
     @Query( " FROM Product WHERE name LIKE '%?1%' ")
     public List<Product> getProductListByName(String name);
 
-    
+
 }
