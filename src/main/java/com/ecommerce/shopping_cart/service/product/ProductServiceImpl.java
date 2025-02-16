@@ -4,6 +4,8 @@ import com.ecommerce.shopping_cart.exception.ProductNotFoundException;
 import com.ecommerce.shopping_cart.model.Product;
 import com.ecommerce.shopping_cart.repository.ProductRepository;
 
+import java.util.List;
+
 public class ProductServiceImpl implements ProductService {
 
     private ProductRepository productRepo;
@@ -15,5 +17,9 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product getProductByName(String name) {
         return null;
+    }
+
+    public List<Product> getProductByBrandName(String brand){
+        return productRepo.getProductByBrand(brand);
     }
 }
