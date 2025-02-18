@@ -1,32 +1,25 @@
 package com.ecommerce.shopping_cart.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Product {
+public class Inventory {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
+    private String productId;
 
-    private String brand;
-    private String price;
-
-    private String description;
-
-
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Category category;
-
-
+    private String size;
 
 }
